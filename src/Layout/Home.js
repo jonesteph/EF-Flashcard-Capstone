@@ -44,11 +44,11 @@ function Home() {
       </div>
       <div>
         {deckList.map((deck,index) => (
-          <Deck key={index} deck={deck} handleDeletedDeck={() => handleDeletedDeck(deck)} /> )
+          <Deck key={index} deck={deck} handleDeletedDeck={() => handleDeletedDeck(deck.id)} /> )
         )}
       </div>
     </>
-  );
+  )
 }
 
 export default Home;

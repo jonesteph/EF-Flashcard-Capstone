@@ -39,7 +39,7 @@ function Study(){
             history.push("/")
           }
         } else {
-          setIndex((index) => index ++)
+          setIndex((current) => current+1)
           setFront(true)
         }
     }

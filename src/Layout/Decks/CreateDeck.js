@@ -1,11 +1,12 @@
 import { React, useState } from "react"
 import NavBar from "../NavBar"
 import { createDeck } from "../../utils/api"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 
 
 function CreateDeck(){
-  const { newDeck, setNewDeck } = useState({})
+  const [ newDeck, setNewDeck ] = useState({})
+  const history = useHistory()
   
   const changeHandler = (event) => { 
     setNewDeck({...newDeck, [event.target.name]: event.target.value })
@@ -14,8 +15,7 @@ function CreateDeck(){
   const onSubmit = async (event) => {
     event.preventDefault();
     const response = await createDeck(newDeck)
-    const deckId = response.id
-    window.location.reload()
+    history.push(`/decks/${response.id}`)
   };
 
   return(
@@ -25,7 +25,7 @@ function CreateDeck(){
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
-          <input className="form-control" id="Name" name="Name" required onChange={changeHandler} />
+          <input className="form-control" id="name" name="name" required onChange={changeHandler} />
           <label htmlFor="description">Description</label>
           <input className="form-control" id="description" name="description" required onChange={changeHandler} />
         </div>
