@@ -18,7 +18,6 @@ function AddCard(){
         window.location.reload()
       }
     
-    const handleCancel = () => {  }
 
     useEffect(() => {
         setCurrentDeck([])
