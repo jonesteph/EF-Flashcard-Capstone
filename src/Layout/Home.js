@@ -29,6 +29,7 @@ function Home() {
   }, [])          
      
   const handleDeletedDeck = (id) => {
+    console.log("being called")
     if (window.confirm("Delete this deck? You will not be able to recover it.")) {
         deleteDeck(id)
         window.location.reload()
@@ -51,4 +52,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Home

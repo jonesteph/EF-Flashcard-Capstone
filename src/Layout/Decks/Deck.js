@@ -15,7 +15,7 @@ function Deck({ index, deck, handleDeletedDeck }){
           <Link to={`/decks/${deck.id}/study`}>
             <button>Study</button>
           </Link>
-          <button onClick={() => handleDeletedDeck}>Delete</button>
+          <button onClick={handleDeletedDeck}>Delete</button>
         </div>
         
       </div>

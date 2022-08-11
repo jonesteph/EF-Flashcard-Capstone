@@ -46,7 +46,7 @@ function Study(){
     
     return(
         <div>
-            <NavBar subLink={`/decks/${deckId}/study`} subLinkName={`Deck ${currentDeck.name}`} currentPage="Study Deck"  />
+            <NavBar subLink={`/decks/${deckId}/study`} subLinkName={currentDeck.name} currentPage="Study Deck"  />
             <h2>Study {currentDeck.name}</h2>
             {loading && <p>Loading...</p>}
             {cardsInDeck.length > 2 && (

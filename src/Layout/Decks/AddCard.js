@@ -45,7 +45,7 @@ function AddCard(){
     return(
         <div>
             <NavBar currentPage="Create Card" />
-            <h2>{currentDeck.name} Create card</h2>
+            <h2>{currentDeck.name}</h2>: <span>Add Card</span>
             <CardForm onSubmit={handleAddCard} onCancel={() => history.push(`decks/${currentDeck.id}`)} currentForm={currentForm} setCurrentForm={setCurrentForm}/>
         </div>
     )

@@ -1,7 +1,10 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
-function Card({ index, card, handleDeletedDeck }){
+function Card({ index, card, handleDeletedCard }){
+  const { deckId } = useParams()
+
+
   return(
     <div className='card'>
       <div className='card-body'>
@@ -10,13 +13,13 @@ function Card({ index, card, handleDeletedDeck }){
         
         
         <div >
-          <Link to={`/decks/${index}/cards/${card.id}/edit`}>
+          <Link to={`/decks/${deckId}/cards/${card.id}/edit`}>
             <button >Edit</button>
           </Link>
-          <Link to={`/decks/${index}/study`}>
+          <Link to={`/decks/${deckId}/study`}>
             <button>Study</button>
           </Link>
-          <button onClick={() => handleDeletedDeck}>Delete</button>
+          <button onClick={handleDeletedCard}>Delete</button>
         </div>
         
       </div>
