@@ -14,7 +14,7 @@ function EditCard(){
     const handleEditCard = async (event) => {
         event.preventDefault()
         await updateCard(currentForm)
-        window.location.reload()
+        history.push(`/decks/${currentDeck.id}`)
     }
     
     useEffect(() => {

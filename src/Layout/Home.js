@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { listDecks, deleteDeck } from "../utils/api"
 import Deck from "./Decks/Deck"
@@ -29,6 +29,7 @@ function Home() {
   }, [])          
      
   const handleDeletedDeck = (id) => {
+    console.log("being called")
     if (window.confirm("Delete this deck? You will not be able to recover it.")) {
         deleteDeck(id)
         window.location.reload()
@@ -51,4 +52,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Home

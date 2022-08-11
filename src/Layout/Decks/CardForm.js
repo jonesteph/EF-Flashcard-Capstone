@@ -12,7 +12,7 @@ function CardForm({ onSubmit, onCancel, currentForm, setCurrentForm }){
                 <textarea className="form-control" name="front" id="front" required value={currentForm.front} onChange={changeHandler} />
             </div>
             <div className="form-group">
-            <label htmlFor="back">Back</label>
+                <label htmlFor="back">Back</label>
                 <textarea className="form-control" name="back" id="back" required value={currentForm.back} onChange={changeHandler} />
             </div>
             <button onClick={onSubmit}>Submit</button>
