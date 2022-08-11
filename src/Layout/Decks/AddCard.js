@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom"
 import { createCard } from "../../utils/api"
 import NavBar from "../NavBar"
